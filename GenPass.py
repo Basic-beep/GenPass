@@ -7,9 +7,9 @@
 
   Since you're here in the code, if you find any bugs or can think of improvements, DM me on Slack @Elliott Rose                                 
 """
-
+import random
 import string
-adj = ('Abject', 'Abandoned','Abdominal','Abhorrent','Abiding','Abject','Able','Able-Bodied','Abnormal','Abounding','Annoyed'
+types = ('Abject', 'Abandoned','Abdominal','Abhorrent','Abiding','Abject','Able','Able-Bodied','Abnormal','Abounding','Annoyed'
        ,'Babbling','Baby','Background','Backhanded','Bacterial','Basic','Bad-tempered','Baffled','Baffling','Bald','Balding'
        ,'Cackling','Caged','Cagey','Calculable','Calculated','Calculating','Callous','Calm','Calming','Camouflaged','Cancelled'
        ,'Daffy','Daft','Daily','Dainty','Damaged','Damaging','Damp','Dandy','Dangerous','Dapper'
@@ -20,9 +20,9 @@ adj = ('Abject', 'Abandoned','Abdominal','Abhorrent','Abiding','Abject','Able','
        ,'Icky','Ideal','Impolite','Inclusive','Incorruptable','Indestructible','Indirect','Inevitable','Infamous','Innocent','Imposing'
        ,'Jaded','Jealous','Jolly','Joyful','Joyless','Juicy','Jumpy','Juvenile','Jubilant','Jerky'
        ,'Kind','Knowledgeable','Kingly','Keen','Kaput','Kindhearted','Key','Knowing','Knobby','Knightly','Kindhearted'
-       ,'Lacy','Lame','Large','Large','Larger','Largest','Last','Lasting','Later','Latest','Lax'
+       ,'Lacy','Lame','Large','Large','Larger','Largest','Last','Lasting','Later','Latest'
        ,'Macabre','Macho','Magic','Magical','Main','Magenta','Majestic','Mindful','Married','Massive'
-       ,'Naive','Nameless','Narcissistic','Nasty','Native','Neat','Needless','Needy','Nervous','Nice'
+       ,'Naive','Nameless','Narcissistic','Nasty','Native','Neat','Needless','Needy','Nervous'
        ,'Obese','Oafish','Oblong','Obscure','Obsolete','Odorless','Offbeat','Ominous','Opportunistic','Ornate'
        ,'Pale','Partial','Passive','Pathetic','Peaceful','Patriotic','Pensive','Perfect','Perky','Petty'
        ,'Quaint','Queasy','Quick','Quirky','Quiet','Quizzical','Questionable','Quickest','Quotable','Queer'
@@ -35,7 +35,7 @@ adj = ('Abject', 'Abandoned','Abdominal','Abhorrent','Abiding','Abject','Able','
        ,'Yawning','Yearly','Yearning','Yellow','Yelping','Yielding','Young','Younger','Youngest','Yummy'
        ,'Zany','Zealous','Zesty','Zippy','Zestful')
 art = ('A','That','The','An','Very')
-noun = ('Aardvark','Abacus','Access','Acorn','Art','Accordion','Acre','Aglet','Airbag','Albatross'
+thing = ('Aardvark','Abacus','Access','Acorn','Art','Accordion','Acre','Aglet','Airbag','Albatross'
         ,'Bathtub','Baseball','Bathhouse','Beach','Bean','Beech','Bellows','Bird','Blind','Bowl'
         ,'Cabin','Cake','Canoe','Cannon','Club','Card','Carpet','Cat','Cave','Chasm'
         ,'Deer','Deep','Dawn','Dog','Default','Demure','Denim','Demon','Design','Diabetes'
@@ -43,7 +43,7 @@ noun = ('Aardvark','Abacus','Access','Acorn','Art','Accordion','Acre','Aglet','A
         ,'Fabric','Father','Faucet','Favorite','Feather','Fiddle','Foxglove','Frog','Fruit','Fritter'
         ,'Gnome','Gadget','Gender','Genre','Glacier','Git','Gorilla','Governor','Gradient','Gopher'
         ,'Havoc','Heterosexual','Heron','Homosexual','Hearth','Helmet','Hyphenation','Human','Hummus','Hypothermia'
-        ,'Ice','Ideal','Ignorant','Imagination','Immortal','Import','Impala','Impact','Impostor','Incence'
+        ,'Ice','Ideal','Ignorant','Imagination','Immortal','Import','Impala','Impact','Impostor'
         ,'Jackal','Jaguar','Jazz','Jockey','Juggernaut','Joke','Joint','Jumpsuit','Jug','Joey'
         ,'Kale','Kidney','Kimono','Kitchen','Knee','Koala','Kingdom','King','Kitty','Kiosk'
         ,'Lab','Ladybug','Lesbian','Lamp','Lantern','Lawmaker','Lung','Lumberman','Lotion','Loophole'
@@ -58,14 +58,17 @@ noun = ('Aardvark','Abacus','Access','Acorn','Art','Accordion','Acre','Aglet','A
         ,'Umbrella','Universe','Uncle','Utensil','Unity','Undertaker','Union','Usher','Underpass','Unblinking'
         ,'Valley','Vein','Velvet','Veneer','Venti','Venue','Vet','Village','Vinegar','Virus'
         ,'Walrus','Walnut','Warlock','Waveform','Waterwheel','Webpage','Wetsuit','Wuss','Whirlpool','Wildebeest'
-        ,'Xylophone'
-        ,'Yacht','Yak','Yahoo','Yarn','Yogurt','Yolk','Yoke','Yam','Youth','Youngster'
+        ,'Yacht','Yak','Yahoo','Yarn','Yogurt','Yolk','Yoke','Youth','Youngster'
         ,'Zebra','Zebrafish','Zoo','Zoologist','Zucchini')
 sym = ('!','@','#','$','^','&','*','(',')','-','_','+','=','`','~','<','>','?',';',':','.',',')
-
-
-
-
-Response = input('Welcome to GenPass! ' 
-'If you want a new Password, press "N" for new. ' 
-'If you want to end the session, press "E" for End.')
+while True:
+    adj = random.choice(types)
+    open = random.choice(art)
+    noun = random.choice(thing)
+    chara = random.choice(sym)
+    num = random.randrange(0,99)
+    p = F"Your new GenPass password is: {open}{adj}{noun}{chara}{num}"
+    print(p)
+    Response = input('If you want a new Password, press anything for new. If you want to end the program, press "E" for End.')
+    if Response == 'E':
+        break
