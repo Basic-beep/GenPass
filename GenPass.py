@@ -10,7 +10,7 @@
 
 import string
 adj = ('Abject', 'Abandoned','Abdominal','Abhorrent','Abiding','Abject','Able','Able-Bodied','Abnormal','Abounding','Annoyed'
-       ,'Babbling','Baby','Background','Backhanded','Bacterial','Bad','Bad-tempered','Baffled','Baffling','Bald','Balding'
+       ,'Babbling','Baby','Background','Backhanded','Bacterial','Basic','Bad-tempered','Baffled','Baffling','Bald','Balding'
        ,'Cackling','Caged','Cagey','Calculable','Calculated','Calculating','Callous','Calm','Calming','Camouflaged','Cancelled'
        ,'Daffy','Daft','Daily','Dainty','Damaged','Damaging','Damp','Dandy','Dangerous','Dapper'
        ,'Eager','Early','Earnest','Ear-piercing','Ear-splitting','Earthshaking','Earthy','Eastern','Eccentric','Edgy','Eerie'
@@ -21,7 +21,7 @@ adj = ('Abject', 'Abandoned','Abdominal','Abhorrent','Abiding','Abject','Able','
        ,'Jaded','Jealous','Jolly','Joyful','Joyless','Juicy','Jumpy','Juvenile','Jubilant','Jerky'
        ,'Kind','Knowledgeable','Kingly','Keen','Kaput','Kindhearted','Key','Knowing','Knobby','Knightly','Kindhearted'
        ,'Lacy','Lame','Large','Large','Larger','Largest','Last','Lasting','Later','Latest','Lax'
-       ,'Macabre','Macho','Magic','Magical','Main','Magenta','Majestic','Mandatory','Married','Massive'
+       ,'Macabre','Macho','Magic','Magical','Main','Magenta','Majestic','Mindful','Married','Massive'
        ,'Naive','Nameless','Narcissistic','Nasty','Native','Neat','Needless','Needy','Nervous','Nice'
        ,'Obese','Oafish','Oblong','Obscure','Obsolete','Odorless','Offbeat','Ominous','Opportunistic','Ornate'
        ,'Pale','Partial','Passive','Pathetic','Peaceful','Patriotic','Pensive','Perfect','Perky','Petty'
@@ -34,8 +34,13 @@ adj = ('Abject', 'Abandoned','Abdominal','Abhorrent','Abiding','Abject','Able','
        ,'Wacky','Wasted','Wasteful','Weak','Weary','Weird','Wet','Wicked','Witty','Wooden'
        ,'Yawning','Yearly','Yearning','Yellow','Yelping','Yielding','Young','Younger','Youngest','Yummy'
        ,'Zany','Zealous','Zesty','Zippy','Zestful')
-art = ('A','That','The','An')
-noun = ()
+art = ('A','That','The','An','Very')
+noun = ('Aardvark','Abacus','Access','Acorn','Art','Accordion','Acre','Aglet','Airbag','Albatross'
+        ,'Bathtub','Baseball','Bathhouse','Beach','Bean','Beech','Bellows','Bird','Blind','Bowl'
+        ,'Cabin','Cake','Canoe','Cannon','Canon','Card','Carpet','Cat','Cave','Chasm'
+        ,'Deer','Deep','Dawn','Dog','Default','Demure','Denim','Demon','Design','Diabetes'
+        ,'Ear','Ease','Edge','Eel','Eggplant','Eraser','Essay','Excerpt','Eyeball','Explosion'
+        ,'Fabric')
 
 
 Response = input('Welcome to GenPass! ' 
